@@ -1,0 +1,98 @@
+<%- include ('../partials/head',{title:"Detalle del producto"}) %> 
+<%- include("../partials/menuHeader.ejs")  %>  
+    <section class="detailProduct">
+            <div class="productImage">
+                <img src="/img/products/<%= articulo.img %>" alt="tren de madera">
+            </div>
+            <div class="info">
+                <h4>Inicio/Producto/Trenes</h4>
+                <h3>TREN DE MADERA</h3>
+                <p class="infoPrecio">$5,999</p>
+                <p class="infoDescrip">Espectacular pista de tren con paisaje de la ciudad</p>
+                <div class="buttonCarrito">AÑADIR A CARRITO</div>
+                <div class="redesProducDetail">Compartir: <i class="fab fa-facebook-f"></i><i class="fab fa-instagram"></i></div>
+                <div class="optionEdit">
+                    
+                    <form action="/products/<%= articulo.id %> " method="post">
+                        <div class="btnEditEli"><input type="submit" value="ELIMINAR"></div>
+                    </form>
+                    <div class="buttonCarrito"><a href="/products/<%= articulo.id %>/edit">EDITAR</a></div>
+                </div>
+            </div>
+            <div class="specs">
+            <div class="specsInfo contDesktop">
+                <h3>Información Adicional</h3>
+                <div class="specsGroup">
+                    <div class="specsInfoName">PESO:</div>
+                    <div class="specsInfoResult">5kg</div>
+                </div>
+                <div class="specsGroup">
+                    <div class="specsInfoName">TAMAÑO:</div>
+                    <div class="specsInfoResult">375cmx24cm</div>
+                </div>
+            </div>
+            <div class="specsInfo">
+                <h3>Pagos y Envíos</h3>
+                <div class=" specsGroupInf">
+                    <div class="specsGroupItem">
+                        <i class="fas fa-truck"></i>
+                        ENVIOS
+                        <p>A domicilio en todo el país.</p>
+                        <p>Envios FLASH en caba</p>
+                    </div>
+                    <div class="specsGroupItem">
+                        <i class="fas fa-file-alt"></i>
+                        FORMAS DE PAGO
+                        <p>3 cuotas sin interés con todas las tarjetas.</p>
+                        <p>5% off con transferencia.</p>
+                        <p>Efectivo por pago fácil ó rapipago</p>
+                    </div>
+                    <div class="specsGroupItem">
+                        <i class="fas fa-store"></i>
+                        LOCAL
+                        <p>Av. 9 de Julio 100, CABA</p>
+                        <p>¡Abrimos todos los dias!</p>
+                    </div>
+                    <div class="specsGroupItem">
+                        <i class="far fa-clock"></i>
+                        Horarios
+                        <p>Lunes a Viernes de 12 a  19hs</p>
+                        <p>Sábados de 11 a 19hs</p>
+                        <p>Domingo de 14 a 19hs</p>
+                    </div>
+                </div>
+                <p>Pódes retirar tu compra online o bien hacer tu compra presencial</p>
+            </div>
+        </div>
+    </section>
+    <section class="relacionados">
+        <div class="relaProduct">
+            <h3>PRODUCTOS RELACIÓNADOS</h3>
+            <div class="relaProImage">
+                <div class="relaCarrousel relaCarrouselLeft"><i class="fas fa-arrow-alt-circle-left"></i></div>
+                <img src="/img/products/trenes.jpg" alt="tren de madera">
+                <div class="relaCarrousel relaCarrouselRight"><i class="fas fa-arrow-alt-circle-right"></i></div>
+            </div>
+            <div class="relaProImage oculto">
+                <div class="relaCarrousel relaCarrouselLeft"><i class="fas fa-arrow-alt-circle-left"></i></div>
+                <img src="/img/products/trenes.jpg" alt="tren de madera">
+                <div class="relaCarrousel relaCarrouselRight"><i class="fas fa-arrow-alt-circle-right"></i></div>
+            </div>
+            <div class="relaProImage oculto">
+                <div class="relaCarrousel relaCarrouselLeft"><i class="fas fa-arrow-alt-circle-left"></i></div>
+                <img src="/img/products/trenes.jpg" alt="tren de madera">
+                <div class="relaCarrousel relaCarrouselRight"><i class="fas fa-arrow-alt-circle-right"></i></div>
+            </div>
+            <div class="relaProImage oculto">
+                <div class="relaCarrousel relaCarrouselLeft"><i class="fas fa-arrow-alt-circle-left"></i></div>
+                <img src="/img/products/trenes.jpg" alt="tren de madera">
+                <div class="relaCarrousel relaCarrouselRight"><i class="fas fa-arrow-alt-circle-right"></i></div>
+            </div>
+            <div class="relaProImage oculto">
+                <div class="relaCarrousel relaCarrouselLeft"><i class="fas fa-arrow-alt-circle-left"></i></div>
+                <img src="/img/products/trenes.jpg" alt="tren de madera">
+                <div class="relaCarrousel relaCarrouselRight"><i class="fas fa-arrow-alt-circle-right"></i></div>
+            </div>
+        </div>
+    </section>
+<%- include("../partials/footerBase.ejs")  %>

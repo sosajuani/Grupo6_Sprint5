@@ -1,0 +1,28 @@
+<%- include("../partials/head",{title:"Iniciar sesion"})  %> 
+<%- include("../partials/menuHeader.ejs")  %>  
+    <!--LOGIN-->
+    <div class="iniciar-sesion">
+        <h3>INICIAR SESIÓN</h3>
+        <img src="img/oso.png" alt="oso">
+    </div>
+    <section class="sectionLogin">
+        <div class="divLogin">
+            <div class="divLogin2">
+                <form class="formLogin" action="#">
+
+                    <input type="email" placeholder="Email o usuario" name="email" id="email" required/>
+                    <input type="password" placeholder="Contraseña" name="clave" id="password" minlength="8" required/>
+                    <div class="recordarUser">
+                        <input type="checkbox" name="recordarUsuario" value="Recordarme" checked>
+                        <label for="terminos">Recordarme</label>
+                    </div>
+                    <a href= "#">¿Olvidaste tu contraseña?</a>
+                    <input type="submit" value="INGRESAR" class="button-login">
+                    <p>¿No tenés una? <a href="/register">crear cuenta</a></p>
+                    
+                </form>
+            </div> 
+        </div>
+    </section>
+    <!-- FOOTER -->
+<%- include("../partials/footerBase.ejs")  %>

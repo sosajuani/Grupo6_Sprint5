@@ -1,0 +1,229 @@
+/*
+* #CEE5D0 - verde
+* #F3F0D7 - amarillo
+* #E0C097 - naranja
+* #FF7878 - rosa
+*/
+.detailProduct{
+    background: #F3F0D7;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    border:1px solid #000;
+    margin-top: 20px;
+    border-radius: 5px;
+    margin-top: 100px;
+}
+.info > h4{
+    margin: 10px 0;
+    font-size: .90rem;
+}
+.info > h3{
+    font-size: 1.8rem;
+    margin: 0;
+}
+.info > .infoPrecio{
+    margin: 10px 0;
+    color: #FF7878;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 0 1px 0  black;
+}
+.productImage{
+    width: 80%;
+    line-height: 0;
+    margin: auto;
+    text-align: center;
+}
+.productImage > img{
+    max-width: 70%;
+    border: 1px solid #333;
+    min-width: 350px;
+}
+.infoDescrip{ display: none;}
+.buttonCarrito{
+    background: #CEE5D0;
+    display: inline-block;
+    padding: 15px 5px;
+    font-weight: bolder;
+    border-radius: 5px;
+    outline: 1px solid #333;
+}
+.redes{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.redes > i{
+    min-width: 36px;
+    padding: 5px;
+    font-size: 1.5rem;
+    margin: 0 5px;
+    border: 1px solid #000;
+    text-align: center;
+    border-radius: 50%;
+}
+.specsInfo{
+    margin: 10px 5px;
+    border-top: 5px solid #ff7878;
+}
+.specsInfo > h3,p{
+    margin: 3px 0;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.specsInfo>p{
+    margin: 3px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.specsGroup{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.specsGroupItem{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.specsGroupItem > p{
+    width: 90%;
+    margin: 0;
+    padding: 5px 0;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: normal;
+}
+.specsGroupItem > i{
+    font-size: 2rem;
+    display: block;
+    padding: 10px;
+    color: #736f6f;
+    text-shadow: 0 1px 0 black;
+}
+.specsInfoName{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.specsInfoResult{
+    font-size: 1.1rem;
+    color: #FF7878;
+}
+/*relacionados*/
+.relacionados{
+    width: 90%;
+    margin: 10px auto;
+}
+.relaProduct > h3{
+    font-size: 1.5rem;
+}
+.relaProImage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.relaProImage > img{
+    width: 80%;
+    border: 1px solid #000;
+}
+.relaCarrousel > i{
+    font-size: 1rem;
+}
+.relaCarrousel{
+    position: absolute;
+}
+.relaCarrouselRight{
+    right: 20px;
+}
+.relaCarrouselLeft{
+    left: 20px;
+}
+.oculto{
+    display: none;
+}
+.tablet{
+    display: none;
+}
+@media only screen and (min-width: 768px){
+    .info > .infoPrecio{
+        font-size: 1.5rem;
+    }
+    .specsGroup{
+        margin-bottom: 20px;
+    }
+    .specsGroupInf{
+        display: flex;
+    }
+    .specsGroupItem{
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .relaCarrousel > i{
+        font-size: 3rem;
+    }
+    .relaCarrouselRight{
+        right: 39px;
+    }
+    .relaCarrouselLeft{
+        left: 39px;
+    }
+    .relaProImage{
+        width: 30%;
+        margin: 10px;
+    }
+    .relaProduct{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .relaProduct > h3{
+        width: 100%;
+    }
+    .oculto{
+        display: block;
+    }
+    .tablet{
+        display: none;
+    }
+    .relaCarrousel > i{
+        display: none;
+    }
+    
+}
+@media only screen and (min-width: 1024px){
+    /*producto*/
+    .detailProduct{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .relaProduct > h3{
+        width: 100%;
+    }
+    .relaProImage{
+        width: 18%;
+        margin: 10px;
+    }
+    .productImage{
+        width: 50%;
+    }
+    .specs{
+        display: flex;
+        flex-direction: column;
+    }
+    .relaCarrousel > i{
+        display: none;
+    }
+    .oculto{
+        display: block;
+    }
+
+}

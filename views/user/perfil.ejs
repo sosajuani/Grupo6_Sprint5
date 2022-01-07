@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <%- include ('../partials/head') %> 
+    <!-- <link rel="stylesheet" href="/css/perfilDeUsuario.css"> -->
+</head>
+<body>
+    <%- include("../partials/menuHeader.ejs")  %>
+    <section class="seccion-usuario">
+        
+        <article class="seccion-usuario_perfil">
+            <div class="contenedor-datos-usuario">
+                <div class="contenedor-img_usuario">
+                    <img src="/img/logo_pequeño.png" alt="foto perfil">
+                </div>
+                <div class="mailName">
+                    <p class="name"> un nombre</p>
+                    <p class="mail"> exampledemail@algo.algo</p>
+                </div>
+                <div class="estrella">
+                    <h3>Valore su conformidad</h3>
+                    <div class="start-widget">
+                        <input type="radio" name="start" id="start-1">
+                        <label for="start-1" class="fas fa-star"></label>
+                        <input type="radio" name="start" id="start-2">
+                        <label for="start-2" class="fas fa-star"></label>
+                        <input type="radio" name="start" id="start-3">
+                        <label for="start-3" class="fas fa-star"></label>
+                        <input type="radio" name="start" id="start-4">
+                        <label for="start-4" class="fas fa-star"></label>
+                        <input type="radio" name="start" id="start-5">
+                        <label for="start-5" class="fas fa-star"></label>
+               
+                    </div>
+                </div>
+            </div>
+            
+        </article>
+        <div class="compras-usuario">
+            <h2>Compras</h2>
+        </div>
+        <article class="seccion-usuario_perfil-compras">
+            <div class="compras">
+                <div class="img-producto">
+                    <img src="/img/icons/img/baby_0_24.jpg" alt="productoX">
+                </div>
+                <div class="description">
+                    <h3>Producto x</h3>
+                </div>
+            </div>
+            <div class="compras">
+                <div class="img-producto">
+                    <img src="/img/icons/img/edad_2_3.jpg" alt="productoX">
+                </div>
+                <div class="description">
+                    <h3>Producto x</h3>
+                </div>
+            </div>
+            <div class="compras">
+                <div class="img-producto">
+                    <img src="/img/icons/img/de_4_6.jpg" alt="productox">
+                </div>
+                <div class="description">
+                    <h3>Producto x</h3>
+                </div>
+            </div>
+        </article>
+    </section>
+    <%- include("../partials/footerBase.ejs")  %>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<%- include("../../partials/head.ejs",{title:"Modificar producto"}) %>
+  <div class="changeProduct1">
+        <%- include("../../partials/admHeader.ejs") %>
+
+    <div class="changeProduct2">
+        <form action="/products/<%= productoEncontrado.id %>/edit?_method=PUT " method="POST" enctype="multipart/form-data">
+
+            <section class="changeProductFile">
+                <div class="form-changeProduct">                        
+                    <h2>Foto actual del Producto</h2>
+                    <img src="/img/products/<%= productoEncontrado.img %> " alt="<%= productoEncontrado.name%>" width="300px" height="300px">
+                    <label for="photo">cambiar img del producto</label>
+                    <input type="file" name="img" accept=".jpg" value="" > 
+                </div>
+            </section>
+
+            <section class="changeProductButtons">
+
+                <div class="form-changeProduct">
+                    <label for="name">Nombre del producto</label>
+                    <input type="text" name="name" id="nombreProducto" value="<%= productoEncontrado.name %> " required>
+                </div>     
+
+                <div class="form-changeProduct">
+                    <label for="price">Precio</label>
+                    <input type="text" name="precio" id="price" value="<%= productoEncontrado.precio %> " required>
+                </div>
+
+                <div class="form-changeProduct">
+                    <label for="information">informacion adicional</label>
+                    <input type="text" name="peso" placeholder="Peso" value=" <%= productoEncontrado.peso %>" required>
+                    <input type="text" name="tamanio" placeholder="Tamaño" value=" <%= productoEncontrado.tamanio %>" crequired> 
+                </div>
+                <div class="form-changeProduct">
+                    <label for="information">informacion adicional</label>
+                    <select name="cat" id="">
+                        <option value="cat1">Cat1</option>
+                        <option value="cat2">Cat2</option>
+                    </select>
+                    <input type="text" name="offPorcen" placeholder="descuento" value=" <%= productoEncontrado.offPorcen %>" crequired> 
+                    <input type="text" name="cantidad" placeholder="cantidad" value=" <%= productoEncontrado.cantidad %>" crequired> 
+                </div>
+                <textarea name="descripcion" id="" cols="30" rows="10"><%= productoEncontrado.descripcion %></textarea>
+                <button type="submit">Guardar cambios</button>
+            </section>
+
+        </form>
+    </div>
+    </div>
+<%- include("../../partials/footerAdmin.ejs") %>

@@ -1,0 +1,39 @@
+<%- include("../../partials/head.ejs",{title:"Añadir producto"}) %>
+</head>
+<body>
+        <%- include("../../partials/menuHeader.ejs") %>
+            <div class="contGeneral contAdd">
+                <form class="adminAddProductForm" action="/products" method="post" enctype="multipart/form-data">
+                    <h3>Agregar nuevo producto</h3>
+                    <input placeholder="Nombre del producto" name="name" type="text">
+                    <input placeholder="Precio" type="number" name="precio" id="">
+                    <input placeholder="Peso" name="peso" type="text">
+                    <input placeholder="Tamaño" name="tamanio" type="text">
+                    <div>
+                        <label for="">Subir imagen</label>
+                        <input type="file" name="img" id="">
+                    </div>
+                    <select name="cat" id="">
+                        <option value="Cat1">Cat1</option>
+                        <option value="Cat2">Cat2</option>
+                    </select>
+                    <!-- <div>
+                        <label for="">Cat1</label>
+                        <input type="checkbox" name="cat" value="cat1" id="">
+                    </div>
+                    <div>
+                        <label for="">Cat2</label>
+                        <input type="checkbox" name="cat" value="cat2" id="">
+                    </div>
+                    <div>
+                        <label for="">Cat3</label>
+                        <input type="checkbox" name="cat" value="cat3" id="">
+                    </div> -->
+                    <input placeholder="Descuento" name="offPorcen" type="number">
+                    <input type="number" name="cantidad" id="" placeholder="Cantidad de Producto">
+                    <textarea placeholder="Descripcion" name="descripcion" id="" cols="30" rows="10"></textarea>
+                    <input type="submit" name="" id="" value="Crear Producto">
+                </form>
+            </div>
+        </section>
+<%- include("../../partials/footerBase.ejs") %>

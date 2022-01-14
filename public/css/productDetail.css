@@ -1,18 +1,20 @@
-/*
-* #CEE5D0 - verde
-* #F3F0D7 - amarillo
-* #E0C097 - naranja
-* #FF7878 - rosa
-*/
 .detailProduct{
     background: #F3F0D7;
     width: 90%;
     margin: auto;
     padding: 10px;
     border:1px solid #000;
-    margin-top: 20px;
     border-radius: 5px;
     margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .info > h4{
     margin: 10px 0;
@@ -21,6 +23,7 @@
 .info > h3{
     font-size: 1.8rem;
     margin: 0;
+    text-align: center;
 }
 .info > .infoPrecio{
     margin: 10px 0;
@@ -32,13 +35,13 @@
 .productImage{
     width: 80%;
     line-height: 0;
-    margin: auto;
     text-align: center;
+    margin: 0 auto;
 }
 .productImage > img{
-    max-width: 70%;
+    max-width: 100%;
     border: 1px solid #333;
-    min-width: 350px;
+    min-width: 300px;
 }
 .infoDescrip{ display: none;}
 .buttonCarrito{
@@ -49,12 +52,18 @@
     border-radius: 5px;
     outline: 1px solid #333;
 }
-.redes{
+.buttonCarrito > a{
+    text-decoration: none;
+    color: inherit;
+}
+.redesProducDetail{
     display: flex;
     align-items: center;
     margin-top: 20px;
+    width: 100%;
+    justify-content: center;
 }
-.redes > i{
+.redesProducDetail > i{
     min-width: 36px;
     padding: 5px;
     font-size: 1.5rem;
@@ -112,11 +121,25 @@
 }
 .specsInfoName{
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 .specsInfoResult{
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #FF7878;
+}
+.optionEdit{
+    display: flex;
+}
+.btnEditEli > input{
+    background: #FF7878;
+    display: inline-block;
+    padding: 15px 5px;
+    font-weight: bolder;
+    border-radius: 5px;
+    outline: 1px solid #333;
+    border:none; 
+    margin: 10px;
+
 }
 /*relacionados*/
 .relacionados{
@@ -154,8 +177,26 @@
     display: none;
 }
 @media only screen and (min-width: 768px){
-    .info > .infoPrecio{
+    .info{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .info > h4{
+        width: 100%;
+    }
+    .info > h3{
+        width: 100%;
+    }
+    .infoDescrip{
+        display: block;
+        width: 100%;
+        font-size: 1rem;
+    }
+    .infoPrecio{
         font-size: 1.5rem;
+        text-align: center;
+        width: 100%;
     }
     .specsGroup{
         margin-bottom: 20px;
@@ -197,13 +238,11 @@
     .relaCarrousel > i{
         display: none;
     }
-    
 }
 @media only screen and (min-width: 1024px){
-    /*producto*/
     .detailProduct{
-        display: flex;
         flex-wrap: wrap;
+        flex-direction: row;
     }
     .relaProduct > h3{
         width: 100%;
@@ -214,6 +253,7 @@
     }
     .productImage{
         width: 50%;
+        margin: 0;
     }
     .specs{
         display: flex;
@@ -225,5 +265,4 @@
     .oculto{
         display: block;
     }
-
 }

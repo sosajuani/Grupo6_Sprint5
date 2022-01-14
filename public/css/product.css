@@ -1,8 +1,5 @@
-*{
-    box-sizing: border-box;
-}
 .ordenar-productos-container{
-    margin-top: 100px;
+    margin-top: 5px;
     display: flex;
     justify-content: space-between;
     padding:10px;
@@ -47,8 +44,15 @@
     justify-content: space-around;
     flex-wrap: wrap;
 }
+.products-lista-articulos a{
+    text-decoration: none;
+    color:black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
 .products-lista-articulos-contenedor_producto{
-    
     margin: 16px 10px;
     background-color: #fff;
     padding: 8px;
@@ -60,7 +64,8 @@
     min-width: 225px;
     max-width: 330px;
 }
-.products-lista-articulos-contenedor_producto>img{
+.products-lista-articulos-contenedor_producto>a>img{
+    margin-bottom: 15px;
     min-width: 200px;
     min-height: 200px;
     width: 90%;
@@ -74,7 +79,7 @@
     border: 1px solid rgba(34, 201, 92, 0.3);
     color: hsl(141, 48%, 45%);
 }
-.products-lista-articulos-contenedor_producto>div,img{
+.products-lista-articulos-contenedor_producto>div{
     margin:2px 0;
 }
 /* ocultos para phone */
@@ -84,7 +89,6 @@
 .products-lista-categorias-desktop{
     display: none;
 }
-
 @media only screen and (min-width: 768px){
     .products-lista-categorias-desktop{
         display: flex;
@@ -110,7 +114,7 @@
     }
     .products-lista-articulos-contenedor_producto{
         width:30%;
-        min-width: 150px;
+        min-width: 220px;
         max-width: 250px;
     }
     .products-lista-articulos-contenedor_producto > img{
@@ -124,13 +128,13 @@
     }
     .contenedor-producto-cuota > p{
         font-weight: bold;
-    }
+    }  
 }
 @media only screen and (min-width: 1024px){
     .contenedor-producto-info > p, .contenedor-producto-cuota > p{
         font-size: 1rem;
     }
-    
+
     .products-lista-articulos {
         width: 90%;
         flex-wrap: wrap;

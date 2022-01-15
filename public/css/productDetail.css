@@ -1,11 +1,10 @@
 .detailProduct{
     background: #F3F0D7;
     width: 90%;
-    margin: auto;
+    margin: 20px auto;
     padding: 10px;
     border:1px solid #000;
     border-radius: 5px;
-    margin-top: 100px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -33,7 +32,7 @@
     text-shadow: 0 1px 0  black;
 }
 .productImage{
-    width: 80%;
+    width: 100%;
     line-height: 0;
     text-align: center;
     margin: 0 auto;
@@ -41,7 +40,7 @@
 .productImage > img{
     max-width: 100%;
     border: 1px solid #333;
-    min-width: 300px;
+    min-width: 250px;
 }
 .infoDescrip{ display: none;}
 .buttonCarrito{
@@ -51,6 +50,7 @@
     font-weight: bolder;
     border-radius: 5px;
     outline: 1px solid #333;
+    color: #000;
 }
 .buttonCarrito > a{
     text-decoration: none;
@@ -129,6 +129,10 @@
 }
 .optionEdit{
     display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
 }
 .btnEditEli > input{
     background: #FF7878;
@@ -138,8 +142,6 @@
     border-radius: 5px;
     outline: 1px solid #333;
     border:none; 
-    margin: 10px;
-
 }
 /*relacionados*/
 .relacionados{
@@ -238,8 +240,15 @@
     .relaCarrousel > i{
         display: none;
     }
+    .productImage{
+        width: 70%;
+    }
 }
 @media only screen and (min-width: 1024px){
+    .info{
+        flex-direction: column;
+        padding: 20px;
+    }
     .detailProduct{
         flex-wrap: wrap;
         flex-direction: row;

@@ -31,6 +31,11 @@ const mainController=function(archivojson) {
             let fila=this.readFile();
             return fila.find(e=>e.id==id);
         },
+        //buscar por mail
+        findMail:function(email){
+            let fila=this.readFile();
+            return fila.find(e=>e.email==email)
+        },
         //crear nuevo producto
         crear:function(fila){
             let filas=this.readFile();

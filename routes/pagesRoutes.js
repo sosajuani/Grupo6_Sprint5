@@ -5,6 +5,7 @@ const validacion=require('../middleware/validation')
 
 router.get('/', controllerPages.home);
 router.get('/login', controllerPages.login);
+router.post('/login', controllerPages.loginProcess);
 
 router.get('/register', controllerPages.register);
 router.post('/register', validacion,controllerPages.regProcess);

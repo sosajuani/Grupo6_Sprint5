@@ -1,6 +1,9 @@
 <%- include("../partials/head",{title:"Home"})  %> 
 <%- include("../partials/menuHeader.ejs")  %>  
     <!-- Seccion del carrusel -->
+    <% if(user){ %> 
+        <h1>ESTAS LOGUEADO</h1>
+    <% } %> 
     <section class="carrouselSection">
         <!-- contenedor de box-imagenes -->
         <div class="contenedor-imagenes-carruselHome">

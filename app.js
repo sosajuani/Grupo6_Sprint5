@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const  methodOverride = require('method-override')
+const cookieParser = require("cookie-parser")
+const session = require("express-session")
+const accessMiddleware = require('./middleware/accessMiddleware');
 
 //motor de plantilla
 app.set('views engine','ejs');
@@ -13,6 +16,15 @@ app.use(express.static('public'));
 //para usar la informacion
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
+//app.use(cookieParser)
+app.use(session({
+    secret: "123",
+    resave: false,
+    saveUninitialized: true
+}))
+
+//middleware de session
+app.use(accessMiddleware)
 
 //override
 app.use(methodOverride('_method'));

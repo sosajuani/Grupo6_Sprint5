@@ -1,14 +1,28 @@
 const fs=require('fs');
 let jsonDb=require('../model/mainJson.js');
 let db=jsonDb('user');
-const bcryptjs=require('bcryptjs')
-const {validatioResult, validationResult}=require('express-validator')
+const {compareSync, hashSync}=require('bcryptjs')
+const {validatioResult, validationResult}=require('express-validator');
+const { Console } = require('console');
 const controllerPages = {
     'home': (req, res) => {
         res.render('pages/home.ejs')
     },
     'login': (req, res) => {
         res.render('pages/login.ejs')
+    },
+    'loginProcess': (req, res) => {
+        let user = db.findMail(req.body.email)
+        if(user){
+            let confirm = compareSync(req.body.pass,user.password)
+            if(!confirm){
+                return res.render('pages/login.ejs',{password: !confirm ? "La contraseña ingresada no es correcta" : null, oldEmail: req.body.email})
+            }
+            req.session.user = user
+            return res.redirect("/")
+        }else{
+            res.render('pages/login.ejs',{email: !user ? "El email ingresado no es correcto" : null})
+        }
     },
     'carrito':(req,res) =>{
         res.render('pages/carrito.ejs')

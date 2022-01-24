@@ -138,35 +138,6 @@ body{
     width: 90%;
     margin: auto;
 }
-/*** HOME SECCION INICIO***/
-/******** HOME SECCION FIN ********/
-/******** REGISTRO SECCION INICIO ********/
-/******** REGISTRO SECCION FIN ********/
-/******** CONTACTO PAGE INICIO ********/
-/******** CONTACTO PAGE FIN ********/
-/******** ADMIN SECCION INICIO ********/
-/******** ADMIN SECCION FIN ********/
-/********INICIO DE CHANGE PRODUCT ADMIN***/
-/********FIN DE CHANGE PRODUCT EN ADMIN*****/
-/********INICIO DE LIST PRODUCT ADMIN***/
-/********FIN DE LIST PRODUCT ADMIN***/
- /****LOGIN****/
-/****FIN LOGIN****/
-/*********** CARRITO INICIO **************/
-/*********** CARRITO FIN **************/
-/*********** AÑADIR PRODUCTO INICIO **************/
-/*********** AÑADIR PRODUCTO FIN **************/
-/*********** SOMOS INICIO **************/
-/*********** SOMOS FIN **************/
-/* CSS de perfil de usuario */
-/* Por el momento solo funciona con hover, con js se mejoraria */
-/* ^Finalizo CSS de Perfil de usuario ^ */
-/* productoDetail  inicio css*/
-/* productoDetail fin */
-/* Inicia Productos css */
-/* Finaliza Productos */
-/*mantener aca abajo*/
-/*mostrar y oculta menu*/
 .tabletHeader{
     display: none;
 }
@@ -176,6 +147,11 @@ body{
 }
 .mostrarMenu{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.errForm{
+    color: red;
+    margin: 0;
+    font-size: 0.9rem;
 }
 @media only screen and (min-width: 768px){
     /*header*/

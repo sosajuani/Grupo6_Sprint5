@@ -1,7 +1,7 @@
 <%- include("../partials/head",{title:"Home"})  %> 
 <%- include("../partials/menuHeader.ejs")  %>  
     <!-- Seccion del carrusel -->
-    <% if(user){ %> 
+    <% if(user && access == 1){ %> 
         <h1>ESTAS LOGUEADO</h1>
     <% } %> 
     <section class="carrouselSection">

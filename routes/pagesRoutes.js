@@ -7,6 +7,7 @@ const auth = require("../middleware/authMiddleware");
 router.get('/', controllerPages.home);
 router.get('/login',auth.visited, controllerPages.login);
 router.post('/login', controllerPages.loginProcess);
+router.get('/logout',auth.logged, controllerPages.logout);
 
 router.get('/register',auth.visited, controllerPages.register);
 router.post('/register', validacion,controllerPages.regProcess);

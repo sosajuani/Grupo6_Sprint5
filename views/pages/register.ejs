@@ -18,18 +18,33 @@
                 <% } %> 
                 <form class="registerForm" action="/register" method="POST">
                     <input type="text" placeholder="Nombre" name="nombre" id="nombre" value="<%= locals.oldData? locals.oldData.nombre:null %>"require/>
+                    <% if (locals.errors && locals.errors.nombre) { %>
+                        <p class="errForm"><%= locals.errors.nombre.msg %></p>
+                    <% } %>
                     <input type="text" placeholder="Usuario" name="usuario" id="usuario" value="<%= locals.oldData? locals.oldData.usuario:null %>" require/>
-                    <input type="email" placeholder="Email" name="email" id="email"  value="<%= locals.oldData? locals.oldData.Email:null %>"require/>
+                    <% if (locals.errors && locals.errors.usuario) { %>
+                        <p class="errForm"><%= locals.errors.usuario.msg %></p>
+                    <% } %>
+                    <input type="email" placeholder="Email" name="email" id="email"  value="<%= locals.oldData? locals.oldData.email:null %>"require/>
+                    <% if (locals.errors && locals.errors.email) { %>
+                        <p class="errForm"><%= locals.errors.email.msg %></p>
+                    <% } %>
                     <input type="text" placeholder="Domicilio" name="direccion" id="direccion"  value="<%= locals.oldData? locals.oldData.direccion:null %>"require/>
+                    <% if (locals.errors && locals.errors.direccion) { %>
+                        <p class="errForm"><%= locals.errors.direccion.msg %></p>
+                    <% } %>
                     <input type="tel" placeholder="Teléfono (opcional)" name="telefono" id="telefono"  value="<%= locals.oldData? locals.oldData.telefono:null %>"require/>
-                    <input type="password" placeholder="Contraseña" name="contrasenia" id="contrasenia" require/> 
-                    <input type="password" placeholder="Confirmar contraseña" name="contrasenia1" id="contrasenia1"require/>
-                    <select name="categoria" id="categoria">
+                    <input type="password" placeholder="Contraseña" name="pass" id="contrasenia" require/> 
+                    <input type="password" placeholder="Confirmar contraseña" name="pass1" id="contrasenia1"require/>
+                    <% if (locals.errors && locals.errors.pass) { %>
+                        <p class="errForm"><%= locals.errors.pass.msg %></p>
+                    <% } %>
+                    <select name="cat" id="categoria">
                         <option value="3">comprador</option>
                         <option value="2">vendedor</option>
                     </select>
                     <input type="submit" value="REGISTRARSE">
-                    <p>¿Ya tenés una cuenta? <a href="/login">Iniciar sesión</a></p>
+                    <p class="registerFormPregunta">¿Ya tenés una cuenta? <a href="/login">Iniciar sesión</a></p>
                 </form>
             </div>
             

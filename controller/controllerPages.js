@@ -19,10 +19,16 @@ const controllerPages = {
                 return res.render('pages/login.ejs',{password: !confirm ? "La contraseña ingresada no es correcta" : null, oldEmail: req.body.email})
             }
             req.session.user = user
+            req.session.access = user.access
+            req.session.cat = user.cat
             return res.redirect("/")
         }else{
             res.render('pages/login.ejs',{email: !user ? "El email ingresado no es correcto" : null})
         }
+    },
+    'logout': (req,res)=>{
+        delete req.session.user
+        res.redirect("/")
     },
     'carrito':(req,res) =>{
         res.render('pages/carrito.ejs')
@@ -48,9 +54,12 @@ const controllerPages = {
             "email":req.body.email,
             "domicilio":req.body.direccion,
             "telf":req.body.telefono,
-            "password":hashSync(req.body.contrasenia,10),
+            "password":hashSync(req.body.pass,10),
+            "cat":req.body.cat,
             "img":" ",
+            "access":2,
         }
+        console.log(req.body);
         db.crear(objetoNew);
         res.redirect("/")
     

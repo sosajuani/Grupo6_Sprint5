@@ -15,10 +15,9 @@ const validaciones=[
         }
         return true
     }),
-    body('direccion').notEmpty().withMessage('direccion campo obligatorio'),
-    body('contrasenia').notEmpty().withMessage('contrasenia campo obligatorio').isLength({min:5}).withMessage('minimo de caracteres 5'),
-    body('contrasenia1').custom((value,{req})=>{
-        if(value!=req.body.contrasenia){
+    body('direccion').notEmpty().withMessage('Dirección campo obligatorio'),
+    body('pass').notEmpty().withMessage('Contraseña campo obligatorio').isLength({min:5}).withMessage('La contraseña debe tener minimo 5 caracteres').custom((value,{req})=>{
+        if(value!=req.body.pass1){
             throw new Error('Las contraseñas no coinciden')
         }
         return true

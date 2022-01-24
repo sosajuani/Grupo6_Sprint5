@@ -48,7 +48,7 @@ const controllerPages = {
             "email":req.body.email,
             "domicilio":req.body.direccion,
             "telf":req.body.telefono,
-            "password":bcryptjs.hashSync(req.body.contrasenia,10),
+            "password":hashSync(req.body.contrasenia,10),
             "img":" ",
         }
         db.crear(objetoNew);

@@ -9,8 +9,9 @@
                 <h3>TREN DE MADERA</h3>
                 <p class="infoPrecio">$5,999</p>
                 <p class="infoDescrip">Espectacular pista de tren con paisaje de la ciudad</p>
-                <div class="buttonCarrito">AÑADIR A CARRITO</div>
+                <div class="buttonCarrito"><a href="/carrito">AÑADIR A CARRITO</a></div>
                 <div class="redesProducDetail">Compartir: <i class="fab fa-facebook-f"></i><i class="fab fa-instagram"></i></div>
+                <% if(user && access == 1 || cat == 2){ %> 
                 <div class="optionEdit">
                     
                     <form action="/products/<%= articulo.id %> " method="post">
@@ -18,6 +19,7 @@
                     </form>
                     <a class="buttonEdit" href="/products/<%= articulo.id %>/edit"><div class="buttonCarrito">EDITAR</div></a>
                 </div>
+                <% } %> 
             </div>
             <div class="specs">
             <div class="specsInfo contDesktop">
